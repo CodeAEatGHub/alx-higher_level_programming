@@ -4,23 +4,27 @@
 
 /**
  * check_cycle - checks for loops in a list
- * @h: pointer to head of list
+ * @list: pointer to head of list
  * Return: o if there is no loop
  */
 int check_cycle(listint_t *list)
 {
-    const listint_t *current;
+	const listint_t *current;
 
-    current = list;
-    while (current != NULL)
-    {
-        if (current < current->next)
-        	return (0);
-	else
+	if (list == NULL)
+		return (1);
+	current = list;
+	while (current != NULL)
 	{
-		current = current->next;
-		continue;
+		if (current <= current->next)
+		{
+			return (0);
+		}
+		else
+		{
+			current = current->next;
+			continue;
+		}
 	}
-    }
-    return (1);
+	return (1);
 }
