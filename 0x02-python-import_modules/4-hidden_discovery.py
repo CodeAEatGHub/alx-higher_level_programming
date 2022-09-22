@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     import hidden_4
-    for i in range(len(dir.name)):
-        print('{}: {}'.format(i, sys.argv[i]))
+    for entry in dir(hidden_4):
+        if entry[0] != '_':
+            print('{}'.format(entry))
