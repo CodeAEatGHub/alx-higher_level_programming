@@ -10,7 +10,7 @@ if __name__ == '__main__':
     b = int(sys.argv[3])
     if not sys.argv[2] in ['+', '-', '*', '/']:
         print('Unknown operator. Available operators: +, -, * and /')
-        exit (1)
+        exit(1)
     if sys.argv[2] == '+':
         result = add(a, b)
     elif sys.argv[2] == '-':
