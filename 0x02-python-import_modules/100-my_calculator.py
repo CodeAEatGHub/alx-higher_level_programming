@@ -6,7 +6,6 @@ if __name__ == '__main__':
     if len(sys.argv) != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    print('{}'.format(len(sys.argv[0])))
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     if not sys.argv[2] in ['+', '-', '*', '/']:
@@ -16,7 +15,7 @@ if __name__ == '__main__':
         result = add(a, b)
     elif sys.argv[2] == '-':
         result = sub(a, b)
-    elif sys.argv[2] == "*":
+    elif sys.argv[2] == '*':
         result = mul(a, b)
     elif sys.argv[2] == '/':
         result = div(a, b)
