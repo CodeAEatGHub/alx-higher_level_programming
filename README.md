@@ -1,1 +1,1 @@
-Python codes on high level programming.
+Python codes on lists and structures
