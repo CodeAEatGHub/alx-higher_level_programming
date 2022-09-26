@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    for i in range(len(my_string)):
-        if not my_string[i] == 'c':
-            if not my_string[i] == 'C':
-                print('{}'.format(my_string[i]), end='')
-    print()
+    rev = ""
+    for index in range(0, len(my_string)):
+        if my_string[index] != 'c' and my_string[index] != 'C':
+            rev = rev + my_string[index]
+    return rev
