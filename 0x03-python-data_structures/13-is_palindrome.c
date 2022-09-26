@@ -9,7 +9,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t  *end_parser = *head, *front_parser = *head;
+	listint_t  *end_parser = *head;
 	int i = 0, j = 0, *p;
 
 	if (head == NULL)
@@ -22,10 +22,11 @@ int is_palindrome(listint_t **head)
 		end_parser = end_parser->next;
 	}
 	p = malloc(sizeof(int) * i);
+	end_parser = *head;
 	for (j = 0 ; j < i ; j++)
 	{
-		p[j] = front_parser->n;
-		front_parser = front_parser->next;
+		p[j] = end_parser->n;
+		end_parser = end_parser->next;
 	}
 	for (j = 0 ; j < i ; j++)
 	{
