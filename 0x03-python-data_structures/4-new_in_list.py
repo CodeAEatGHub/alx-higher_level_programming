@@ -2,6 +2,8 @@
 def new_in_list(my_list, idx, element):
     new_list = []
     new_list = my_list.copy()
+    if my_list is None:
+        pass
     if idx < 0 or idx > len(my_list):
         return my_list
     else:
