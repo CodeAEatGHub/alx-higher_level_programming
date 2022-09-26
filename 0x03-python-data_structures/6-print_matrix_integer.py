@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for l in matrix:
-        for sl in l:
-            print('{:d}'.format(sl), end='')
-            if sl != l[-1]:
+    for lst in matrix:
+        for slst in lst:
+            print('{:d}'.format(slst), end='')
+            if slst != lst[-1]:
                 print(end=' ')
         print()
