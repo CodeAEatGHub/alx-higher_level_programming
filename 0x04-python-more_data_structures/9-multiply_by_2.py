@@ -7,4 +7,4 @@ def multiply_by_2(a_dictionary):
         new[i] = a_dictionary[i]
     for i in list(new):
         new[i] = 2 * new[i]
-    return new
+    return (new)
