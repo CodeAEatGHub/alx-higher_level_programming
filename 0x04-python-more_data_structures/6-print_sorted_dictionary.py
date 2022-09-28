@@ -2,5 +2,5 @@
 def print_sorted_dictionary(a_dictionary):
     if a_dictionary is None:
         return None
-    for i in list(sorted(a_dictionary)):
+    for i in sorted(a_dictionary):
         print('{} : {}'.format(i, a_dictionary[i]))
