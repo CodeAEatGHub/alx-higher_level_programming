@@ -9,7 +9,7 @@ def uniq_add(my_list=[]):
             if j == i and ic < jc:
                 sum = sum - i
                 jc = 0
-                break;
+                break
             jc = jc + 1
         ic = ic + 1
         jc = 0
