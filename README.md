@@ -1,1 +1,1 @@
-Python codes on lists and structures
+C codes on doubly linked list.
