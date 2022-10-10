@@ -8,7 +8,7 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         exc = 1
         return None
-    except TypeError:
+    except ValueError:
         exc = 1
         return None
     finally:
