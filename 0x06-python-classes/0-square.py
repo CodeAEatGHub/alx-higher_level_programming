@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Square module. """
+
+
 class Square:
     """A class to hold square objects. """
 

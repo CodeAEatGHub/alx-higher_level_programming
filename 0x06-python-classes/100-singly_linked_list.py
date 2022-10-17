@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Singly linked list module"""
 
+
 class Node:
     """Node class"""
     def __init__(self, data, next_node=None):
@@ -65,4 +66,4 @@ class SinglyLinkedList:
             node = node.next_node
         if node.next_node:
             n.next_node = node.next_node
-        node.next_node = n 
+        node.next_node = n
