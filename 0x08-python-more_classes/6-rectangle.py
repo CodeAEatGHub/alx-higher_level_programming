@@ -5,6 +5,9 @@
 class Rectangle:
     '''Rectangle class'''
 
+    number_of_instances = 0
+    """int: The number of rectangles initialized."""
+
     def __init__(self, width=0, height=0):
         '''Initializer.
         Args:
@@ -13,7 +16,7 @@ class Rectangle:
         '''
         self.width = width
         self.height = height
-        self.__class__.num += 1
+        self.__class__.number_of_instances += 1
 
     @property
     def width(self):
@@ -76,4 +79,4 @@ class Rectangle:
     def __del__(self):
         '''Method called during deletion of an instance.'''
         print("Bye rectangle...")
-        self.__class__.num -= 1
+        self.__class__.number_of_instances -= 1
