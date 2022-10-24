@@ -19,5 +19,5 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
-
-doctest.testfile("tests/7-base_geometry.txt")
+if __name__ == '__main__'
+    doctest.testfile("tests/7-base_geometry.txt")
