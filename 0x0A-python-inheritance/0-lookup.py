@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
-    return (dir(obj))
+    """Returns names in the class."""
+    return(dir(obj))
