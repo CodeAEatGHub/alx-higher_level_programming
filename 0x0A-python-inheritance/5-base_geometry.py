@@ -4,5 +4,4 @@
 
 class BaseGeometry:
     """BaseGeometry class"""
-    def area(self):
-        pass
+    pass

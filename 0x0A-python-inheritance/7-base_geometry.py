@@ -20,4 +20,4 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
-doctest.testfile("7-base_geometry.txt")
+doctest.testfile("tests/7-base_geometry.txt")
