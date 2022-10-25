@@ -17,14 +17,18 @@ class Student:
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation of an instance."""
         lst = dict()
-        l = self.__dict__
+        ls_t = self.__dict__
         if attrs:
             for i in attrs:
                 if i in l:
-                    lst[i] = l[i]
+                    lst[i] = ls_t[i]
             return (lst)
         else:
-            return (l)
+            return (ls_t)
 
     def reload_from_json(self, json):
         """Replaces all attributes of the student instance."""
+        ls = dict()
+        ls = self.__dict__
+        for i in json.keys():
+            ls[i] = json[i]

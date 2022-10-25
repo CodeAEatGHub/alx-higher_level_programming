@@ -17,11 +17,11 @@ class Student:
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation of an instance."""
         lst = dict()
-        l = self.__dict__
+        ls = self.__dict__
         if attrs:
             for i in attrs:
-                if i in l:
-                    lst[i] = l[i]
+                if i in ls:
+                    lst[i] = ls[i]
             return (lst)
         else:
-            return (l)
+            return (ls)
