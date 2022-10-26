@@ -3,20 +3,100 @@
 >>> bg.area()
 area() is not implemented
 
->>> bg.integer_validator("name", "John")
-[TypeError] name must be an integer
+Test present: check instantiation
+>>> bg = BaseGeometry()
 
->>> bg.integer_validator("name", 1.234)
-[TypeError] name must be an integer
+Test present: area()
+>>> area()
+area() is not implemented
 
->>> bg.integer_validator("name", int(INF))
-[TypeError] name must be an integer
+Test present: integer_validator()
+>>> integer_validator()
+<name> must be greater than 0
 
->>> bg.integer_validator("name", 0)
-[ValueError] age must be greater than 0
+Test present: integer_validator(“ age” )
+>>>integer_validator(“  age”  )
+ age must be greater than 0
 
->>> bg.integer_validator("name", -100)
-[ValueError] age must be greater than 0
+Test present: integer_validator(“ age” , 1)
+>>>integer_validator(“  age”  , 1)
 
->>> bg.integer_validator("name", nan)i
-[ValueError] age must be greater than 0
+Test present: integer_validator(“ age” , 0)
+>>>integer_validator(“  age”  , 0)
+ age must be greater than 0
+
+Test present: integer_validator(“ age” , -4)
+>>> integer_validator(“  age”  , -4)
+ age must be greater than 0
+
+Test present: integer_validator(“ age” , “ 4” )
+>>> integer_validator(“  age”  , “  4”  )
+ age must be an integer
+
+Test present: integer_validator(“ age” , (4,))
+>>> integer_validator(“  age”  , (4,))
+ age must be an integer
+
+Test present: integer_validator(“ age” , [3])
+>>> integer_validator(“  age”  , [3])
+ age must be an integer
+
+Test present: integer_validator(“ age” , True)
+>>> integer_validator(“  age”  , True)
+ age must be an integer
+
+Test present: integer_validator(“ age” , {3, 4})
+>>> integer_validator(“  age”  , {3, 4})
+ age must be an integer
+
+Test present: integer_validator(“ age” , None)
+>>> integer_validator(“  age”  , None)
+ age must be an integerTest present: check instantiation
+>>> bg = BaseGeometry()
+
+Test present: area()
+>>> area()
+area() is not implemented
+
+Test present: integer_validator()
+>>> integer_validator()
+<name> must be greater than 0
+
+Test present: integer_validator(“ age” )
+>>>integer_validator(“  age”  )
+ age must be greater than 0
+
+Test present: integer_validator(“ age” , 1)
+>>>integer_validator(“  age”  , 1)
+
+Test present: integer_validator(“ age” , 0)
+>>>integer_validator(“  age”  , 0)
+ age must be greater than 0
+
+Test present: integer_validator(“ age” , -4)
+>>> integer_validator(“  age”  , -4)
+ age must be greater than 0
+
+Test present: integer_validator(“ age” , “ 4” )
+>>> integer_validator(“  age”  , “  4”  )
+ age must be an integer
+
+Test present: integer_validator(“ age” , (4,))
+>>> integer_validator(“  age”  , (4,))
+ age must be an integer
+
+Test present: integer_validator(“ age” , [3])
+>>> integer_validator(“  age”  , [3])
+ age must be an integer
+
+Test present: integer_validator(“ age” , True)
+>>> integer_validator(“  age”  , True)
+ age must be an integer
+
+Test present: integer_validator(“ age” , {3, 4})
+>>> integer_validator(“  age”  , {3, 4})
+ age must be an integer
+
+Test present: integer_validator(“ age” , None)
+>>> integer_validator(“  age”  , None)
+ age must be an integer

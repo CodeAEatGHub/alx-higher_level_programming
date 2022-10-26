@@ -1,1 +1,81 @@
+
+Regular tests passed
 >>>
+
+
+check instantiation
+>>> my_list = MyList()
+
+
+check inherits from list
+>>>my_list.append(1)
+
+
+check __str__
+>>>
+
+
+check append()
+>>>my_list.append(1)
+
+
+check print_sorted() with sorted append
+>>>
+
+
+check print_sorted() with not sorted append
+>>>
+
+
+check print_sorted() with no sorted append with negative number
+>>>
+
+
+check print_sorted() with empty list
+>>>
+
+
+check print_sorted() returns a new list
+>>>
+
+
+Regular tests passed
+>>>
+
+
+check instantiation
+>>>
+
+
+check inherits from list
+>>>
+
+
+check __str__
+>>>
+
+
+check append()
+>>>
+
+
+check print_sorted() with sorted append
+>>>
+
+
+check print_sorted() with not sorted append
+>>>
+
+
+check print_sorted() with no sorted append with negative number
+>>>
+
+
+check print_sorted() with empty list
+>>>
+
+
+check print_sorted() returns a new list
+>>>
+
+
