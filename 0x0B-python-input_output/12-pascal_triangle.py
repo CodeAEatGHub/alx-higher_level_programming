@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Triangle"""
 
+
 def pascal_triangle(n):
     """Creates a triangle from a list of lists."""
     ls1 = []
