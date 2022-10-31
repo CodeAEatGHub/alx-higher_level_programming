@@ -15,7 +15,6 @@ class Rectangle(Base):
     __y = 0
     id = 0
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes new instances."""
         if type(width) not in [int, float]:
@@ -31,12 +30,12 @@ class Rectangle(Base):
         if type(x) not in [int, float]:
             raise TypeError("x must be an integer")
         if x < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = x
         if type(y) not in [int, float]:
             raise TypeError("y must be an integer")
         if y < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = y
         if id is not None and type(id) is not int:
             raise TypeError("id must be an integer")
@@ -111,13 +110,14 @@ class Rectangle(Base):
         for j in range(0, self.__height):
             for k in range(0, self.__x):
                 print(" ", end="")
-            for l in range(0, self.__width):
+            for wd in range(0, self.__width):
                 print("#", end="")
             print()
 
     def __str__(self):
         """Prints the string representation of the class."""
-        return f'[{Rectangle.__name__}] ({self.id}) {self.x}/{self.y} - {self.__width}/{self.__height}'
+        return f'[{Rectangle.__name__}]" "({self.id}) {self.x}
+        /{self.y} - {self.__width}/{self.__height}'
 
     def update(self, *args, **kwargs):
         """Updates the class attributes."""

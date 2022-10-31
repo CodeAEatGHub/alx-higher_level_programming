@@ -9,10 +9,9 @@ class Base:
     """Base class"""
     __nb_objects = 0
 
-
     def __init__(self, id=None):
         """Initializes new instances."""
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -90,10 +89,10 @@ class Base:
                 i = [int(r) for r in row]
                 if cls is Rectangle:
                     dct = {"id": i[0], "width": i[1], "height": i[2],
-                         "x": i[3], "y": i[4]}
+                           "x": i[3], "y": i[4]}
                 else:
                     dct = {"id": i[0], "size": i[1],
-                         "x": i[2], "y": i[3]}
+                           "x": i[2], "y": i[3]}
                 file_n.append(cls.create(**dct))
         return file_n
 
