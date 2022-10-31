@@ -17,22 +17,22 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes new instances."""
-        if type(width) not in [int, float]:
+        if type(width) not in [int]:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be > 0")
         self.__width = width
-        if type(height) not in [int, float]:
+        if type(height) not in [int]:
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be > 0")
         self.__height = height
-        if type(x) not in [int, float]:
+        if type(x) not in [int]:
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
         self.__x = x
-        if type(y) not in [int, float]:
+        if type(y) not in [int]:
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
@@ -51,7 +51,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """Width setter"""
-        if type(width) not in [int, float]:
+        if type(width) not in [int]:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be > 0")
@@ -65,7 +65,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """Width setter"""
-        if type(height) not in [int, float]:
+        if type(height) not in [int]:
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be > 0")
@@ -79,7 +79,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """X setter"""
-        if type(x) not in [int, float]:
+        if type(x) not in [int]:
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be > 0")
@@ -93,7 +93,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """Y getter"""
-        if type(y) not in [int, float]:
+        if type(y) not in [int]:
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be > 0")
