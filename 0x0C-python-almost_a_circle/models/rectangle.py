@@ -116,8 +116,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Prints the string representation of the class."""
-        return f'[{Rectangle.__name__}]" "({self.id}) {self.x}
-        /{self.y} - {self.__width}/{self.__height}'
+        return (f'[{Rectangle.__name__}]" "({self.id}) {self.x}' +
+                '/{self.y} - {self.__width}/{self.__height}')
 
     def update(self, *args, **kwargs):
         """Updates the class attributes."""

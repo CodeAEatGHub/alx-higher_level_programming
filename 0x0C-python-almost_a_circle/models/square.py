@@ -14,8 +14,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """Prints the string representation of the class."""
-        return f'[{Square.__name__}]" "({self.id})
-    {self.x}/{self.y} - {self.height}'
+        return (f'[{Square.__name__}]" "({self.id})' +
+                '{self.x}/{self.y} - {self.height}')
 
     @property
     def size(self):
