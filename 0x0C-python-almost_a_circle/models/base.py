@@ -29,7 +29,7 @@ class Base:
     def save_to_file(self, list_objs):
         """Write the JSON representation to a file."""
         a = []
-        if list_objs is not None:
+        if list_objs != []:
             for i in list_objs:
                 d = dict()
                 if i.__class__.__name__ == 'Rectangle':
