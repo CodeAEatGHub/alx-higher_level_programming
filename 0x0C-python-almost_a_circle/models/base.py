@@ -31,7 +31,12 @@ class Base:
         a = []
         if list_objs is not None:
             for i in list_objs:
-                a.append(self.to_json_string(i.__dict__))
+                d = dict()
+                if i.__class__.__name__ == 'Rectangle':
+                    d = {'width': i.width, 'height': i.height, 'x': i.x, 'y': i.y, 'id': i.id}
+                elif i.__class__.__name__ == 'Square':
+                    d = {'side': i.side, 'x': i.x, 'y': i.y, 'id': i.id}
+                a.append(json.loads(self.to_json_string(d)))
             name = list_objs[0].__class__.__name__ + ".json"
             with open(name, 'w', encoding="utf-8") as f:
                 json.dump(a, f)
