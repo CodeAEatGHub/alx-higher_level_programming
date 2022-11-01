@@ -29,11 +29,12 @@ class Base:
     def save_to_file(self, list_objs):
         """Write the JSON representation to a file."""
         a = []
-        if list_objs != []:
+        if list_objs != [] and list_objs is not None:
             for i in list_objs:
                 d = dict()
                 if i.__class__.__name__ == 'Rectangle':
-                    d = {'width': i.width, 'height': i.height, 'x': i.x, 'y': i.y, 'id': i.id}
+                    d = {'width': i.width, 'height': i.
+                         height, 'x': i.x, 'y': i.y, 'id': i.id}
                 elif i.__class__.__name__ == 'Square':
                     d = {'size': i.size, 'x': i.x, 'y': i.y, 'id': i.id}
                 a.append(json.loads(self.to_json_string(d)))
