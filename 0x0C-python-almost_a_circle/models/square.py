@@ -10,12 +10,12 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initializes new square instances."""
-        Rectangle.__init__(self, size, size, x, y, id=None)
+        Rectangle.__init__(self, size, size, x, y, id)
 
     def __str__(self):
         """Prints the string representation of the class."""
-        return (f'[{Square.__name__}]" "({self.id})' +
-                '{self.x}/{self.y} - {self.height}')
+        return (f'[{Square.__name__}] ({self.id})'
+                f' {self.x}/{self.y} - {self.height}')
 
     @property
     def size(self):
@@ -31,12 +31,19 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Updates the Square instance."""
         b = ()
-        if len(args) > 1:
+        if len(args) == 1 and len(kwargs) == 0:
+            Rectangle.update(self, *args)
+        if len(args) > 1 and len(kwargs) == 0:
             a = list(args)
             a.insert(2, args[1])
             b = tuple(a)
-            Rectangle.update(b)
-        Rectangle.update(args, kwargs)
+            Rectangle.update(self, *a)
+        if len(kwargs) > 0 and 'size' in kwargs.keys():
+            kwargs['width'] = kwargs['size']
+            kwargs['height'] = kwargs['size']
+            Rectangle.update(self, **kwargs)
+        if len(kwargs) > 0:
+            Rectangle.update(self, **kwargs)
 
     def to_dictionary(self):
         """Returns a dictionary representation of the instance."""
