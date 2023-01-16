@@ -1,3 +1,3 @@
 #!/bin/bash
-# Displays the body of response
-curl -sL "$1"
+# Requests HTTP and echos body
+curl -so /dev/null -w '%{size_download}\n' "$1"
