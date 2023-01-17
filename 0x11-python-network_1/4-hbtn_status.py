@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""
-Does stuff
-"""
+"""Tests status of web pages"""
+
 import requests
-import sys
-
-
 if __name__ == "__main__":
-    print("hello")
+    url = "https://intranet.hbtn.io/status"
+    res = requests.get(url)
+    con = res.text
+    pr = '''Body response:
+        \t- type: {}
+        \t- content: {}'''.format(type(con), con)
+    print(pr)
