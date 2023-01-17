@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""Checks status of web pages"""
+"""
+Grabs the header X-Request-Id from a url passed as an argument
+"""
+import urllib.request
+import sys
 
 
 if __name__ == "__main__":
-    import urllib.request
-    import sys
-    url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
-        meta = response.info()
-        for header in meta._headers:
-            if header[0] == 'X-Request-Id':
-                print(header[1])
+    req = urllib.request.Request(sys.argv[1])
+    with urllib.request.urlopen(req) as response:
+        print(response.getheader('X-Request-Id'))
