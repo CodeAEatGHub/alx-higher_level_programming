@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""POSTs requests so servers"""
+"""
+Post some headers
+"""
+import urllib.request
+import sys
 
 
 if __name__ == "__main__":
-    import urllib.request
-    import urllib.parse
-    import sys
-    url = sys.argv[1]
-    email = sys.argv[2]
-    payload = {'email': email}
-    payload = urllib.parse.urlencode(payload)
-    payload = payload.encode('ascii')
-    req = urllib.request.Request(url, payload)
+    data = urllib.parse.urlencode({'email': sys.argv[2]}).encode('utf-8')
+    req = urllib.request.Request(sys.argv[1])
     with urllib.request.urlopen(req) as response:
-        print(response.read().decode('utf-8'))
+        print(response.read())

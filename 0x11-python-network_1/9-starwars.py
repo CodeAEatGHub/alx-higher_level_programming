@@ -1,29 +1,19 @@
 #!/usr/bin/python3
-"""Posts data to star wars api"""
+"""
+Sends a search request to the StarWars API
+"""
+import requests
+import sys
 
 
 if __name__ == "__main__":
-    import requests
-    import sys
+    names = []
     url = "https://swapi.co/api/people/"
-    search_url = url + "?search="
-    if len(sys.argv) > 1:
-        search_url += sys.argv[1]
-    else:
-        search_url = url
-    response = requests.get(search_url)
-    if response.status_code != requests.codes.ok or len(response.text) <= 0:
-        print('No result')
-        sys.exit()
-    else:
-        try:
-            my_obj = response.json()
-            if len(my_obj) == 0:
-                print('No result')
-                sys.exit()
-            print('Number of results: {}'.format(my_obj.get('count')))
-            results = my_obj.get('results')
-            for result in results:
-                print(result.get('name'))
-        except ValueError as invalid_json:
-            print('Not a valid JSON')
+    req = requests.get(url, params={'search': sys.argv[1]})
+    res = req.json()['results']
+    num_results = len(res)
+    print("Number of result: {:d}".format(num_results))
+    if num_results > 0:
+        for i in range(0, num_results):
+            names.append(res[i]['name'])
+        print("{}".format("\n".join(names)))

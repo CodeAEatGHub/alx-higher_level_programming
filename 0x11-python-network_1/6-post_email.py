@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Posts data to web servers"""
+"""
+Gets the body of response with requests library
+"""
+import requests
+import sys
 
 
 if __name__ == "__main__":
-    import requests
-    import sys
-    url = sys.argv[1]
-    email = sys.argv[2]
-    payload = {'email': email}
-    response = requests.post(url, data=payload)
-    print(response.text)
+    req = requests.get(sys.argv[1])
+    print(req.text)

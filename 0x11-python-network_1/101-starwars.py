@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Does stuff
+Starwars API JSON parsing
 """
 import requests
 import sys
