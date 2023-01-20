@@ -6,4 +6,4 @@ import sys
 
 if __name__ == "__main__":
     req = requests.get(sys.argv[1])
-    print(req.text)
+    print(req.headers.get('X-Request-Id'))
