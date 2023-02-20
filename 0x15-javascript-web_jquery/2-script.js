@@ -1,8 +1,6 @@
-const para = document.querySelector("div#red_header");
-//.getElementsById("red_header")[0];
-
-para.addEventListener('click', colorize);
-
-function colorize(){
-document.getElementsByTagName("header")[0].style.color = "#FF0000";
-}
+/*
+JavaScript script that updates the text color of the <header> element to red (#FF0000) when the user clicks on the tag DIV#red_header
+*/
+$('div#red_header').click(function () {
+  $('header').css('color', '#FF0000');
+});

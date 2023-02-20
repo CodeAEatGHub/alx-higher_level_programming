@@ -1,7 +1,6 @@
-const para = document.querySelectorAll('div#red_header');
-
-para.addEventListener('click', colorize);
-
-function colorize(){
-document.getElementsByTagName("header")[0].style.color = "#FF0000";
-}
+/*
+JavaScript script that adds the class red to the <header> element when the user clicks on the tag DIV#red_header
+*/
+$('div#red_header').click(function () {
+  $('header').addClass('red');
+});
