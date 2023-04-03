@@ -1,1 +1,1 @@
-Python codes on object relational mapping.
+Codes on object relational mapping.
